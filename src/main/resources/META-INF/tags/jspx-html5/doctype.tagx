@@ -1,0 +1,6 @@
+<jsp:root version="2.3" xmlns:jsp="http://java.sun.com/JSP/Page">
+
+	<jsp:output omit-xml-declaration="yes" />
+
+	<![CDATA[<!DOCTYPE html>]]>
+</jsp:root>

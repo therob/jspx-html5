@@ -1,0 +1,19 @@
+<jsp:root version="2.3" xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:jh5="http://java.robert-augustin.net/jsp/jspx-html5">
+
+	<jsp:directive.attribute name="href" required="true" />
+	<jsp:directive.attribute name="type" />
+	<jsp:directive.attribute name="defer" type="Boolean" />
+	<jsp:directive.attribute name="async" type="Boolean" />
+
+	<jsp:output omit-xml-declaration="yes" />
+
+	<jh5:element name="link">
+		<jh5:attribute name="rel" value="stylesheet" />
+		<jh5:attribute name="href" value="${href}" />
+		<c:if test="${not empty type}">
+			<jh5:attribute name="type" value="${type}" />
+		</c:if>
+	</jh5:element>
+</jsp:root>

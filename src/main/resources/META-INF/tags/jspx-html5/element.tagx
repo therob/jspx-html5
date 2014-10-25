@@ -1,0 +1,23 @@
+<jsp:root version="2.3" xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+	<jsp:directive.attribute name="name" required="true" />
+	<jsp:directive.attribute name="expand" type="Boolean" required="false" />
+
+	<jsp:output omit-xml-declaration="yes" />
+
+	<jsp:text>&lt;${name}</jsp:text>
+	<jsp:doBody />
+	<c:choose>
+		<c:when test="${jspxHtml5ElementBodyInvoked || expand}">
+			<c:if test="${expand}">&gt;</c:if>
+			<jsp:text>&lt;/${name}&gt;</jsp:text>
+			<c:if test="${jspxHtml5ElementBodyInvoked}">
+				<c:remove var="jspxHtml5ElementBodyInvoked" scope="request" />
+			</c:if>
+		</c:when>
+		<c:otherwise>
+			<jsp:text>/&gt;</jsp:text>
+		</c:otherwise>
+	</c:choose>
+</jsp:root>

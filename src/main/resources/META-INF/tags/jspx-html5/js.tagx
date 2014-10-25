@@ -1,0 +1,28 @@
+<jsp:root version="2.3" xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:jh5="http://java.robert-augustin.net/jsp/jspx-html5">
+
+	<jsp:directive.attribute name="src" required="true" />
+	<jsp:directive.attribute name="charset" />
+	<jsp:directive.attribute name="defer" type="Boolean" />
+	<jsp:directive.attribute name="async" type="Boolean" />
+
+	<jsp:output omit-xml-declaration="yes" />
+
+	<c:if test="${async}">
+		<c:set var="defer" value="${async}" />
+	</c:if>
+	<jh5:element name="script" expand="true">
+		<jh5:attribute name="type" value="text/javascript" />
+		<jh5:attribute name="src" value="${src}" />
+		<c:if test="${not empty charset}">
+			<jh5:attribute name="charset" value="${charset}" />
+		</c:if>
+		<c:if test="${defer}">
+			<jh5:attribute name="defer" value="${defer}" />
+		</c:if>
+		<c:if test="${async}">
+			<jh5:attribute name="async" value="${async}" />
+		</c:if>
+	</jh5:element>
+</jsp:root>

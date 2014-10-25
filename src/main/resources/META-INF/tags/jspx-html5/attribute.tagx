@@ -1,0 +1,21 @@
+<jsp:root version="2.3" xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+	<jsp:directive.attribute name="name" required="true" />
+	<jsp:directive.attribute name="value" required="false" />
+
+	<jsp:output omit-xml-declaration="yes" />
+
+	<jsp:doBody var="theBody" />
+
+	<jsp:text> ${name}</jsp:text>
+	<c:if test="${value != null || not empty theBody}">
+		<jsp:text>="</jsp:text>
+		<c:choose>
+			<c:when test="${not empty value}">${value}</c:when>
+			<c:when test="${not empty theBody}">${theBody}</c:when>
+			<c:otherwise></c:otherwise>
+		</c:choose>
+		<jsp:text>"</jsp:text>
+	</c:if>
+</jsp:root>
