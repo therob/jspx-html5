@@ -5,7 +5,7 @@
 	<short-name>jh5</short-name>
 	<uri>http://java.robert-augustin.net/jsp/jspx-html5</uri>
 	<tag-file>
-		<name>doctype-html5</name>
+		<name>doctype</name>
 		<path>/META-INF/tags/jspx-html5/doctype.tagx</path>
 	</tag-file>
 	<tag-file>
