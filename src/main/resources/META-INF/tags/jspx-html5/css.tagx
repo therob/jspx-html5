@@ -11,7 +11,9 @@
 
 	<jh5:element name="link">
 		<jh5:attribute name="rel" value="stylesheet" />
-		<jh5:attribute name="href" value="${href}" />
+		<jh5:attribute name="href">
+			<c:url value="${href}" />
+		</jh5:attribute>
 		<c:if test="${not empty type}">
 			<jh5:attribute name="type" value="${type}" />
 		</c:if>

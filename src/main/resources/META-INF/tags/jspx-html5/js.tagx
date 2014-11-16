@@ -14,7 +14,9 @@
 	</c:if>
 	<jh5:element name="script" expand="true">
 		<jh5:attribute name="type" value="text/javascript" />
-		<jh5:attribute name="src" value="${src}" />
+		<jh5:attribute name="src">
+			<c:url value="${src}" />
+		</jh5:attribute>
 		<c:if test="${not empty charset}">
 			<jh5:attribute name="charset" value="${charset}" />
 		</c:if>
