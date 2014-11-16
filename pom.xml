@@ -17,4 +17,13 @@
 		<developerConnection>scm:git:ssh://git@github.com/therob/jspx-html5.git</developerConnection>
 		<url>https://github.com/therob/jspx-html5</url>
 	</scm>
+	
+	<dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+			<scope>runtime</scope>
+		</dependency>
+	</dependencies>
 </project>
