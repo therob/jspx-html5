@@ -1,0 +1,14 @@
+<jsp:root version="2.3" xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:jh5="http://java.robert-augustin.net/jsp/jspx-html5">
+
+	<jsp:directive.tag body-content="empty"/>
+	
+	<jsp:directive.attribute name="map" required="true" type="java.util.Map" />
+
+	<jsp:output omit-xml-declaration="yes" />
+
+	<c:forEach items="${map}" var="attr">
+		<jh5:attribute name="${attr.key}" value="${attr.value}" />
+	</c:forEach>
+</jsp:root>

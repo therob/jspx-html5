@@ -9,12 +9,12 @@
 	<jsp:text>&lt;${name}</jsp:text>
 	<jsp:doBody />
 	<c:choose>
-		<c:when test="${jspxHtml5ElementBodyInvoked || expand}">
-			<c:if test="${expand}">&gt;</c:if>
+		<c:when test="${jspxHtml5ElementBodyInvoked}">
 			<jsp:text>&lt;/${name}&gt;</jsp:text>
-			<c:if test="${jspxHtml5ElementBodyInvoked}">
-				<c:remove var="jspxHtml5ElementBodyInvoked" scope="request" />
-			</c:if>
+			<c:remove var="jspxHtml5ElementBodyInvoked" scope="request" />
+		</c:when>
+		<c:when test="${expand}">
+			<jsp:text>&gt;&lt;/${name}&gt;</jsp:text>
 		</c:when>
 		<c:otherwise>
 			<jsp:text>/&gt;</jsp:text>

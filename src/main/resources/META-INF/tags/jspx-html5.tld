@@ -24,4 +24,12 @@
 		<name>attribute</name>
 		<path>/META-INF/tags/jspx-html5/attribute.tagx</path>
 	</tag-file>
+	<tag-file>
+		<name>attributes</name>
+		<path>/META-INF/tags/jspx-html5/attributes.tagx</path>
+	</tag-file>
+	<tag-file>
+		<name>body</name>
+		<path>/META-INF/tags/jspx-html5/body.tagx</path>
+	</tag-file>
 </taglib>
