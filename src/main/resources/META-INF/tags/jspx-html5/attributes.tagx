@@ -1,6 +1,6 @@
 <jsp:root version="2.3" xmlns:jsp="http://java.sun.com/JSP/Page"
 	xmlns:c="http://java.sun.com/jsp/jstl/core"
-	xmlns:jh5="http://java.robert-augustin.net/jsp/jspx-html5">
+	xmlns:jh5="http://therob.github.io/jspx-html5">
 
 	<jsp:directive.tag body-content="empty"/>
 	

@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
 	<tlib-version>1.0</tlib-version>
 	<short-name>jh5</short-name>
-	<uri>http://java.robert-augustin.net/jsp/jspx-html5</uri>
+	<uri>http://therob.github.io/jspx-html5</uri>
 	<tag-file>
 		<name>doctype</name>
 		<path>/META-INF/tags/jspx-html5/doctype.tagx</path>
